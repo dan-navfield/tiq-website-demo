@@ -1,0 +1,43 @@
+@import "tailwindcss";
+@plugin "tailwindcss-animate";
+
+@theme {
+  --color-navy: #000033;
+  --color-navy-light: #000066;
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+  --color-neutral: #EBEBE2;
+  --color-neutral-dark: #D5D5C8;
+  --color-gray-50: #FAFAF7;
+  --color-gray-100: #F5F5F0;
+  --color-gray-200: #E8E8E0;
+  --color-gray-400: #999999;
+  --color-gray-600: #666666;
+  --color-gray-800: #333333;
+  --color-tiq-blue: #003366;
+  --color-tiq-gold: #C4A35A;
+
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+}
+
+:root {
+  --background: #FFFFFF;
+  --foreground: #000000;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* TIQ-style link underline on hover */
+a {
+  text-decoration: none;
+}

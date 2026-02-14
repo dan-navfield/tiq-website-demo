@@ -1,0 +1,631 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" type="image/ico" href="/dist/img/favicon.ico" />
+
+    <title>TIQ - Trade and Investment Queensland &#x2014; invest, buy, export</title>
+    <meta name="keywords" content="Trade, Investment, Queensland, Invest, Buy, Export" />
+    <meta name="description" content="TIQ helps connect investors, exporters, and buyers. Learn about our regions, and discover the many benefits of doing business in Queensland." />
+    <meta property="og:url" content="www.tiq.qld.gov.au/StatusCode/404" />
+    <meta property="og:title" content="TIQ - Trade and Investment Queensland &#x2014; invest, buy, export" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="TIQ helps connect investors, exporters, and buyers. Learn about our regions, and discover the many benefits of doing business in Queensland." />
+    <meta property="og:locale" content="en_AU" />
+    <meta property="og:site_name" content="TIQ - Trade and Investment Queensland &#x2014; invest, buy, export" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:description" content="TIQ helps connect investors, exporters, and buyers. Learn about our regions, and discover the many benefits of doing business in Queensland." />
+    <meta name="twitter:title" content="TIQ - Trade and Investment Queensland &#x2014; invest, buy, export" />
+    <meta name="twitter:site" content="@tradeinvestqld" />
+    <meta name="twitter:creator" content="@tradeinvestqld" />
+
+    <!-- Styles -->
+    <link href="/dist/styles/main.css?v=0.0.015" rel="stylesheet" type="text/css">
+
+    
+
+    <!-- Scripts -->
+    <script src="/dist/scripts/main.js?v=0.0.015" defer></script>
+    <script src="/dist/vue/vue-app.js?v=0.0.015" defer></script>
+
+
+	
+
+    <!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-B148JD94V9"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-B148JD94V9');  </script>
+
+<!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-B148JD94V9"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-B148JD94V9'); gtag('config', 'AW-957852678'); </script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5JQV5P');</script>
+<!-- End Google Tag Manager -->
+
+<!-- Hotjar Tracking Code for https://www.tiq.qld.gov.au/ -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:5032134,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+
+<style>
+.four-tile-wrapper {
+cursor: pointer !important;
+}
+</style>
+
+
+
+    
+</head>
+
+<body class="solid-header ">
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5JQV5P"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+    
+
+	<section class="alerts">
+		
+
+
+
+<div class="swiper alert-container">
+	<div class="swiper-wrapper">
+			<div id="Slide-3641" class="swiper-slide alert alert-dismissible fade show" role="alert" style="color: #000033; background-color: #00e6e6;">
+				<div class="container-xl">
+					<div class="row">
+						<div class="col-12">
+							<div class="alert-wrapper">
+								<div class="content">
+									<span class="material-symbols-rounded">info</span>
+									Tariff updates - support for Queensland businesses.&nbsp;&nbsp;<a href="/news-and-events/tariffs">Learn more -&gt;</a>
+								</div>
+								<button type="button" class="btn btn-link next-slide" data-bs-dismiss="alert" aria-label="Close"><span class="material-symbols-rounded">close</span></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	</div>
+</div>
+    </section>
+
+    <header id="header" class="opaque">
+        
+		
+
+
+<div class="header-wrapper">
+	<a class="nav-logo" id="HomeAlt" href="/">
+		<span>Menu</span>
+		<img class="logo-light " src="/getmedia/da1b9c51-ab54-4575-9b6b-d19815af36fb/TIQ-crest-logo-white.png?width=2351&amp;height=474&amp;ext=.png" alt="TIQ Logo">
+		<img class="logo-dark active" src="/getmedia/7afffc63-35fe-4652-9bb4-1ef7bcd68a72/TIQ-crest-logo-black.png?width=2351&amp;height=474&amp;ext=.png" alt="TIQ Logo">
+	</a>
+
+
+
+
+<div class="nav-menu">
+    <ul>
+            <li>
+                <a href="/why-queensland" class="" title="Why Queensland">Why Queensland</a>
+                    <span class="subnav-toggle"><span class="material-symbols-rounded">chevron_right</span></span>
+                    <ul>
+                            <li>
+                                <a href="/why-queensland/about-queensland" class="" title="About Queensland">About Queensland</a>
+                            </li>
+                            <li>
+                                <a href="/why-queensland/level-one-queensland-house" class="" title="Queensland House">Queensland House</a>
+                            </li>
+                            <li>
+                                <a href="/why-queensland/brisbane-2032" class="" title="Brisbane 2032">Brisbane 2032</a>
+                            </li>
+                            <li>
+                                <a href="/why-queensland/region-profiles" class="" title="Region Profiles">Region Profiles</a>
+                            </li>
+                    </ul>
+            </li>
+            <li>
+                <a href="/invest" class="" title="Invest">Invest</a>
+                    <span class="subnav-toggle"><span class="material-symbols-rounded">chevron_right</span></span>
+                    <ul>
+                            <li>
+                                <a href="/invest/industry-opportunities" class="" title="Industry Opportunities">Industry Opportunities</a>
+                            </li>
+                            <li>
+                                <a href="/invest/industry-opportunities/mining-resources" class="" title="Mining and resources">Mining and resources</a>
+                            </li>
+                            <li>
+                                <a href="/invest/office-space" class="" title="Apply for office and desk space">Apply for office and desk space</a>
+                            </li>
+                            <li>
+                                <a href="/invest/national-innovation-visa" class="" title="National Innovation visa (NIV) nomination">National Innovation visa (NIV) nomination</a>
+                            </li>
+                            <li>
+                                <a href="/invest/choose-queensland" class="" title="Choose Queensland">Choose Queensland</a>
+                            </li>
+                            <li>
+                                <a href="/news-and-events/success-stories" class="" title="Investor Success Stories">Investor Success Stories</a>
+                            </li>
+                    </ul>
+            </li>
+            <li>
+                <a href="/export" class="" title="Export">Export</a>
+                    <span class="subnav-toggle"><span class="material-symbols-rounded">chevron_right</span></span>
+                    <ul>
+                            <li>
+                                <a href="https://outlook.office365.com/book/ExporterAttractionConsultation@tiqqld.onmicrosoft.com/?ismsaljsauthenabled=true" class="" title="Book a free consultation">Book a free consultation</a>
+                            </li>
+                            <li>
+                                <a href="/export/marketfinder" class="" title="Market Finder">Market Finder</a>
+                            </li>
+                            <li>
+                                <a href="/export/mining-resources" class="" title="Mining and resources">Mining and resources</a>
+                            </li>
+                            <li>
+                                <a href="/export/grants-and-assistance" class="" title="Apply for grants and assistance">Apply for grants and assistance</a>
+                            </li>
+                            <li>
+                                <a href="/export/grants-and-assistance/market-accelerator-program" class="" title="Market Accelerator Program">Market Accelerator Program</a>
+                            </li>
+                            <li>
+                                <a href="/export/mining-resources/mets" class="" title="Mining Equipment, Technology and Services (METS)">Mining Equipment, Technology and Services (METS)</a>
+                            </li>
+                            <li>
+                                <a href="/export/food-beverage-and-agriculture" class="" title="Food, beverage and agriculture">Food, beverage and agriculture</a>
+                            </li>
+                            <li>
+                                <a href="/export/market-profiles" class="" title="View market profiles">View market profiles</a>
+                            </li>
+                            <li>
+                                <a href="/export/e-commerce-and-selling-online" class="" title="Ecommerce business and selling online">Ecommerce business and selling online</a>
+                            </li>
+                            <li>
+                                <a href="/export/export-success-stories" class="" title="Export success stories">Export success stories</a>
+                            </li>
+                    </ul>
+            </li>
+            <li>
+                <a href="/news-and-events" class="" title="News and events">News and events</a>
+                    <span class="subnav-toggle"><span class="material-symbols-rounded">chevron_right</span></span>
+                    <ul>
+                            <li>
+                                <a href="/news-and-events/events/premier-of-qld-export-awards" class="" title="Export Awards">Export Awards</a>
+                            </li>
+                            <li>
+                                <a href="/news-and-events/tariffs" class="" title="Tariff hub">Tariff hub</a>
+                            </li>
+                            <li>
+                                <a href="/news-and-events/events/expo-2025-osaka" class="" title="World Expo 2025 Osaka">World Expo 2025 Osaka</a>
+                            </li>
+                            <li>
+                                <a href="/news-and-events/news" class="" title="News">News</a>
+                            </li>
+                            <li>
+                                <a href="/news-and-events/events" class="" title="Events">Events</a>
+                            </li>
+                            <li>
+                                <a href="/news-and-events/success-stories" class="" title="Success stories">Success stories</a>
+                            </li>
+                    </ul>
+            </li>
+            <li>
+                <a href="/about" class="" title="About">About</a>
+                    <span class="subnav-toggle"><span class="material-symbols-rounded">chevron_right</span></span>
+                    <ul>
+                            <li>
+                                <a href="/about/how-we-help" class="" title="How We Help">How We Help</a>
+                            </li>
+                            <li>
+                                <a href="/about/our-global-network" class="" title="Our Global Network">Our Global Network</a>
+                            </li>
+                            <li>
+                                <a href="/about/regional-advisors" class="" title="Regional Advisors">Regional Advisors</a>
+                            </li>
+                            <li>
+                                <a href="/about/strategies-publications-policies" class="" title="Corporate publications">Corporate publications</a>
+                            </li>
+                            <li>
+                                <a href="/about/our-board" class="" title="Our Board">Our Board</a>
+                            </li>
+                            <li>
+                                <a href="/about/our-management" class="" title="Our Management">Our Management</a>
+                            </li>
+                            <li>
+                                <a href="/tiqcareers" class="" title="TIQCareers">TIQCareers</a>
+                            </li>
+                    </ul>
+            </li>
+            <li>
+                <a href="/contact" class="" title="Contact">Contact</a>
+                    <span class="subnav-toggle"><span class="material-symbols-rounded">chevron_right</span></span>
+                    <ul>
+                            <li>
+                                <a href="/contact/our-offices" class="" title="Our Offices">Our Offices</a>
+                            </li>
+                    </ul>
+            </li>
+
+        <li class="mobile-nav-language">
+            <button class="btn btn-link" title="English">
+                <span class="material-symbols-rounded">Language</span><span>English</span>
+            </button>
+            <ul class="nav-list">
+                        <li><a href="/ar/about-trade-and-investment-queensland" title="&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;">&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</a></li>
+                        <li><a href="/de/about-trade-and-investment-queensland" title="Deutsch">Deutsch</a></li>
+                        <li class="active"><a href="/" title="English">English</a></li>
+                        <li><a href="/es/about-trade-and-investment-queensland" title="Espa&#xF1;ol">Espa&#xF1;ol</a></li>
+                        <li><a href="/hi/about-trade-and-investment-queensland" title="&#x939;&#x93F;&#x902;&#x926;&#x940;">&#x939;&#x93F;&#x902;&#x926;&#x940;</a></li>
+                        <li><a href="/id/about-trade-and-investment-queensland" title="Indonesian">Indonesian</a></li>
+                        <li><a href="/ja/about-trade-and-investment-queensland" title="&#x65E5;&#x672C;&#x8A9E;">&#x65E5;&#x672C;&#x8A9E;</a></li>
+                        <li><a href="/ko/about-trade-and-investment-queensland" title="&#xD55C;&#xAD6D;&#xC5B4;">&#xD55C;&#xAD6D;&#xC5B4;</a></li>
+                        <li><a href="/pt/about-trade-and-investment-queensland" title="Portugu&#xEA;s">Portugu&#xEA;s</a></li>
+                        <li><a href="/si/about-trade-and-investment-queensland" title="&#xDC3;&#xDD2;&#xD82;&#xDC4;&#xDBD;">&#xDC3;&#xDD2;&#xD82;&#xDC4;&#xDBD;</a></li>
+                        <li><a href="/th/about-trade-and-investment-queensland" title="&#xE20;&#xE32;&#xE29;&#xE32;&#xE44;&#xE17;&#xE22;">&#xE20;&#xE32;&#xE29;&#xE32;&#xE44;&#xE17;&#xE22;</a></li>
+                        <li><a href="/vi/about-trade-and-investment-queensland" title="Ti&#x1EBF;ng Vi&#x1EC7;t">Ti&#x1EBF;ng Vi&#x1EC7;t</a></li>
+                        <li><a href="/zh-cn/about-trade-and-investment-queensland" title="&#x7B80;&#x4F53;&#x4E2D;&#x6587;">&#x7B80;&#x4F53;&#x4E2D;&#x6587;</a></li>
+                        <li><a href="/zh-hk/about-trade-and-investment-queensland" title="&#x7E41;&#x9AD4;&#x4E2D;&#x6587;">&#x7E41;&#x9AD4;&#x4E2D;&#x6587;</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+
+<div class="nav-search">
+    <input id="HeaderSearchInput" name="searchQuery" class="form-control" type="text" aria-label="Search input" placeholder="Search...">
+    <button id="HeaderSearchBtn" class="btn btn-link" type="submit" aria-label="Search submit"><span class="material-symbols-rounded">Search</span></button>
+</div>
+
+
+<div class="nav-language">
+    <button class="btn btn-link btn-language-mobile" aria-label="Language toggle" title="English">
+        <span class="material-symbols-rounded">Language</span> English
+    </button>
+
+    <ul class="language-list language-list-mobile nav-list">
+                <li><a href="/ar/about-trade-and-investment-queensland" title="&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;">&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</a></li>
+                <li><a href="/de/about-trade-and-investment-queensland" title="Deutsch">Deutsch</a></li>
+                <li class="active"><a href="/" title="English">English</a></li>
+                <li><a href="/es/about-trade-and-investment-queensland" title="Espa&#xF1;ol">Espa&#xF1;ol</a></li>
+                <li><a href="/hi/about-trade-and-investment-queensland" title="&#x939;&#x93F;&#x902;&#x926;&#x940;">&#x939;&#x93F;&#x902;&#x926;&#x940;</a></li>
+                <li><a href="/id/about-trade-and-investment-queensland" title="Indonesian">Indonesian</a></li>
+                <li><a href="/ja/about-trade-and-investment-queensland" title="&#x65E5;&#x672C;&#x8A9E;">&#x65E5;&#x672C;&#x8A9E;</a></li>
+                <li><a href="/ko/about-trade-and-investment-queensland" title="&#xD55C;&#xAD6D;&#xC5B4;">&#xD55C;&#xAD6D;&#xC5B4;</a></li>
+                <li><a href="/pt/about-trade-and-investment-queensland" title="Portugu&#xEA;s">Portugu&#xEA;s</a></li>
+                <li><a href="/si/about-trade-and-investment-queensland" title="&#xDC3;&#xDD2;&#xD82;&#xDC4;&#xDBD;">&#xDC3;&#xDD2;&#xD82;&#xDC4;&#xDBD;</a></li>
+                <li><a href="/th/about-trade-and-investment-queensland" title="&#xE20;&#xE32;&#xE29;&#xE32;&#xE44;&#xE17;&#xE22;">&#xE20;&#xE32;&#xE29;&#xE32;&#xE44;&#xE17;&#xE22;</a></li>
+                <li><a href="/vi/about-trade-and-investment-queensland" title="Ti&#x1EBF;ng Vi&#x1EC7;t">Ti&#x1EBF;ng Vi&#x1EC7;t</a></li>
+                <li><a href="/zh-cn/about-trade-and-investment-queensland" title="&#x7B80;&#x4F53;&#x4E2D;&#x6587;">&#x7B80;&#x4F53;&#x4E2D;&#x6587;</a></li>
+                <li><a href="/zh-hk/about-trade-and-investment-queensland" title="&#x7E41;&#x9AD4;&#x4E2D;&#x6587;">&#x7E41;&#x9AD4;&#x4E2D;&#x6587;</a></li>
+    </ul>
+</div>
+
+
+<div class="nav-actions">
+    <button class="btn btn-link nav-search-toggle" aria-label="Search toggle"><span class="material-symbols-rounded">Search</span></button>
+    <button class="btn btn-link nav-menu-toggle" aria-label="Navigation toggle">
+        <svg fill="none" stroke="currentColor" stroke-width="1.8125" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25"></path></svg>
+    </button>
+</div></div>
+
+
+
+    </header>
+
+	<main>
+		
+		
+
+
+
+
+
+
+
+
+
+
+
+<div class="none none" style="--overlap-bg: #ffffff; background-color: #ffffff;  background-size: cover; background-position: center;">
+    <div class="container-xl py-6 ">
+        <div class="row none ">
+                    <div class="col-12">
+                        
+
+
+
+
+
+
+
+    <div class="fr-view">
+        <h1 class="title" id="isPasted" style="text-align: center">Error 404</h1><h2 class="mb-4-5" style="text-align: center">Sorry, this page could not be found.</h2>
+    </div>
+
+
+    
+
+
+
+
+
+
+
+
+<div class="btn-container flex-wrap gap-lg justify-content-center">
+
+        <a href="/" class="btn btn-lg btn-navy " >
+            Return Home
+        </a>
+
+
+
+</div>
+
+
+    
+
+
+                    </div>
+        </div>
+    </div>
+</div>
+    
+
+
+	</main>
+
+	<footer>
+        <script src="https://js.adsrvr.org/up_loader.1.1.0.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            ttd_dom_ready( function() {
+                if (typeof TTDUniversalPixelApi === 'function') {
+                    var universalPixelApi = new TTDUniversalPixelApi();
+                    universalPixelApi.init("7crxrk0", ["4d17454"], "https://insight.adsrvr.org/track/up");
+                }
+            });
+        </script>
+		
+<div class="footer-social">
+	<div class="container-xl">
+		<div class="social-links">
+			<span>Connect</span>
+			<a href="https://www.linkedin.com/company/tradeinvestqld/" class="social-link" title="LinkedIn" aria-label="LinkedIn">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+					<path d="M6.93994 5.00002C6.93968 5.53046 6.72871 6.03906 6.35345 6.41394C5.97819 6.78883 5.46937 6.99929 4.93894 6.99902C4.40851 6.99876 3.89991 6.78779 3.52502 6.41253C3.15014 6.03727 2.93968 5.52846 2.93994 4.99802C2.94021 4.46759 3.15117 3.95899 3.52644 3.5841C3.9017 3.20922 4.41051 2.99876 4.94094 2.99902C5.47137 2.99929 5.97998 3.21026 6.35486 3.58552C6.72975 3.96078 6.94021 4.46959 6.93994 5.00002ZM6.99994 8.48002H2.99994V21H6.99994V8.48002ZM13.3199 8.48002H9.33994V21H13.2799V14.43C13.2799 10.77 18.0499 10.43 18.0499 14.43V21H21.9999V13.07C21.9999 6.90002 14.9399 7.13002 13.2799 10.16L13.3199 8.48002Z" fill="#000066"/>
+				</svg>
+			</a>
+			<a href="https://www.facebook.com/TradeandInvestmentQld" class="social-link" class="social-link" title="Facebook" aria-label="Facebook">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+					<path d="M14.2 2.875C12.9734 2.875 11.797 3.36228 10.9296 4.22963C10.0623 5.09699 9.575 6.27337 9.575 7.5V10.075H7.1C6.976 10.075 6.875 10.175 6.875 10.3V13.7C6.875 13.824 6.975 13.925 7.1 13.925H9.575V20.9C9.575 21.024 9.675 21.125 9.8 21.125H13.2C13.324 21.125 13.425 21.025 13.425 20.9V13.925H15.922C16.025 13.925 16.115 13.855 16.14 13.755L16.99 10.355C16.9984 10.3218 16.9991 10.2872 16.992 10.2537C16.985 10.2202 16.9704 10.1888 16.9494 10.1618C16.9283 10.1348 16.9014 10.1129 16.8707 10.0979C16.84 10.0829 16.8062 10.075 16.772 10.075H13.425V7.5C13.425 7.39823 13.445 7.29745 13.484 7.20342C13.5229 7.10939 13.58 7.02396 13.652 6.95199C13.724 6.88003 13.8094 6.82294 13.9034 6.78399C13.9974 6.74505 14.0982 6.725 14.2 6.725H16.8C16.924 6.725 17.025 6.625 17.025 6.5V3.1C17.025 2.976 16.925 2.875 16.8 2.875H14.2Z" fill="#000066"/>
+				</svg>
+			</a>
+			<a href="https://twitter.com/tradeinvestqld" class="social-link" class="social-link" title="Twitter" aria-label="Twitter">
+				<svg xmlns="http://www.w3.org/2000/svg" width="25" height="21" viewBox="0 0 25 21" fill="none">
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M9.57436 11.2179L0.833313 0.666504H7.75684L13.1526 7.18799L18.9172 0.695867H22.7303L14.9963 9.41629L24.1666 20.4998H17.2638L11.4213 13.4473L5.18377 20.4803H1.34999L9.57436 11.2179ZM18.2699 18.5449L5.07859 2.62149H6.74992L19.9247 18.5449H18.2699Z" fill="#000066"/>
+				</svg>
+			</a>
+			<a href="https://www.instagram.com/tradeinvestqld/" class="social-link" class="social-link" title="Instagram" aria-label="Instagram">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+					<path d="M7.8 2H16.2C19.4 2 22 4.6 22 7.8V16.2C22 17.7383 21.3889 19.2135 20.3012 20.3012C19.2135 21.3889 17.7383 22 16.2 22H7.8C4.6 22 2 19.4 2 16.2V7.8C2 6.26174 2.61107 4.78649 3.69878 3.69878C4.78649 2.61107 6.26174 2 7.8 2ZM7.6 4C6.64522 4 5.72955 4.37928 5.05442 5.05442C4.37928 5.72955 4 6.64522 4 7.6V16.4C4 18.39 5.61 20 7.6 20H16.4C17.3548 20 18.2705 19.6207 18.9456 18.9456C19.6207 18.2705 20 17.3548 20 16.4V7.6C20 5.61 18.39 4 16.4 4H7.6ZM17.25 5.5C17.5815 5.5 17.8995 5.6317 18.1339 5.86612C18.3683 6.10054 18.5 6.41848 18.5 6.75C18.5 7.08152 18.3683 7.39946 18.1339 7.63388C17.8995 7.8683 17.5815 8 17.25 8C16.9185 8 16.6005 7.8683 16.3661 7.63388C16.1317 7.39946 16 7.08152 16 6.75C16 6.41848 16.1317 6.10054 16.3661 5.86612C16.6005 5.6317 16.9185 5.5 17.25 5.5ZM12 7C13.3261 7 14.5979 7.52678 15.5355 8.46447C16.4732 9.40215 17 10.6739 17 12C17 13.3261 16.4732 14.5979 15.5355 15.5355C14.5979 16.4732 13.3261 17 12 17C10.6739 17 9.40215 16.4732 8.46447 15.5355C7.52678 14.5979 7 13.3261 7 12C7 10.6739 7.52678 9.40215 8.46447 8.46447C9.40215 7.52678 10.6739 7 12 7ZM12 9C11.2044 9 10.4413 9.31607 9.87868 9.87868C9.31607 10.4413 9 11.2044 9 12C9 12.7956 9.31607 13.5587 9.87868 14.1213C10.4413 14.6839 11.2044 15 12 15C12.7956 15 13.5587 14.6839 14.1213 14.1213C14.6839 13.5587 15 12.7956 15 12C15 11.2044 14.6839 10.4413 14.1213 9.87868C13.5587 9.31607 12.7956 9 12 9Z" fill="#000066"/>
+				</svg>
+			</a>
+			<a href="https://www.youtube.com/channel/UCGvzXsQY7gWF7Ym_siiQ3bA" class="social-link" class="social-link" title="Youtube" aria-label="Youtube">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+					<path d="M10 15L15.19 12L10 9V15ZM21.56 7.17C21.69 7.64 21.78 8.27 21.84 9.07C21.91 9.87 21.94 10.56 21.94 11.16L22 12C22 14.19 21.84 15.8 21.56 16.83C21.31 17.73 20.73 18.31 19.83 18.56C19.36 18.69 18.5 18.78 17.18 18.84C15.88 18.91 14.69 18.94 13.59 18.94L12 19C7.81 19 5.2 18.84 4.17 18.56C3.27 18.31 2.69 17.73 2.44 16.83C2.31 16.36 2.22 15.73 2.16 14.93C2.09 14.13 2.06 13.44 2.06 12.84L2 12C2 9.81 2.16 8.2 2.44 7.17C2.69 6.27 3.27 5.69 4.17 5.44C4.64 5.31 5.5 5.22 6.82 5.16C8.12 5.09 9.31 5.06 10.41 5.06L12 5C16.19 5 18.8 5.16 19.83 5.44C20.73 5.69 21.31 6.27 21.56 7.17Z" fill="#000066"/>
+				</svg>
+			</a>
+		</div>
+		<div class="subscribe">
+			<span>Get investment news insights</span>
+			<a href="/subscribe" class="btn btn-outline-navy">Subscribe</a>
+		</div>
+	</div>
+</div>
+
+	<div class="footer-text-banner" style="background-color: #131341;">
+		<div class="container-xl">
+			<div style="text-align: center;">We pay respect to the traditional custodians and first peoples of Queensland, Australia, and acknowledge their continued connection to their country and culture.</div>
+
+		</div>
+	</div>
+
+<div class="footer-nav">
+	
+
+
+
+
+<div class="footer-menu container-xl">
+	<a href="/" class="footer-logo">
+		<img src="/getmedia/da1b9c51-ab54-4575-9b6b-d19815af36fb/TIQ-crest-logo-white.png?width=2351&amp;height=474&amp;ext=.png" alt="TIQ Logo">
+	</a>
+			    <div class="menu-col">
+					    <ul class="nav-list">
+            <li>
+                	<a href="/why-queensland" class="menu-header">Why Queensland</a>
+                    <ul class="nav-list">
+                            <li><a href="/why-queensland/brisbane-2032">Brisbane 2032</a></li>
+                            <li><a href="/why-queensland/region-profiles">Region profiles</a></li>
+                    </ul>
+            </li>
+					    </ul>
+			    </div>
+			    <div class="menu-col">
+					    <ul class="nav-list">
+            <li>
+                	<a href="/invest" class="menu-header">Invest</a>
+                    <ul class="nav-list">
+                            <li><a href="/invest/industry-opportunities">Industry opportunities</a></li>
+                            <li><a href="/invest/investment-prospectus">Investment prospectus</a></li>
+                            <li><a href="/invest/choose-queensland">Choose Queensland</a></li>
+                            <li><a href="/invest/investor-success-stories">Investor success stories</a></li>
+                    </ul>
+            </li>
+					    </ul>
+			    </div>
+			    <div class="menu-col">
+					    <ul class="nav-list">
+            <li>
+                	<a href="/export" class="menu-header">Export</a>
+                    <ul class="nav-list">
+                            <li><a href="/export/marketfinder">Market Finder</a></li>
+                            <li><a href="/export/market-profiles">Market profiles</a></li>
+                            <li><a href="/export/grants">Grants</a></li>
+                            <li><a href="/export/export-and-expand">Export Ready</a></li>
+                            <li><a href="/export/export-success-stories">Exporter success stories</a></li>
+                    </ul>
+            </li>
+					    </ul>
+			    </div>
+			    <div class="menu-col">
+					    <ul class="nav-list">
+            <li>
+                	<a href="/tiqcareers-e87190b35dc48cfedd6724657998b663">Careers</a>
+                    <ul class="nav-list">
+                    </ul>
+            </li>
+					    </ul>
+					    <ul class="nav-list">
+            <li>
+                	<a href="/news-and-events/events">Events</a>
+                    <ul class="nav-list">
+                    </ul>
+            </li>
+					    </ul>
+					    <ul class="nav-list">
+            <li>
+                	<a href="/news-and-events">Resources</a>
+                    <ul class="nav-list">
+                    </ul>
+            </li>
+					    </ul>
+					    <ul class="nav-list">
+            <li>
+                	<a href="/about">About</a>
+                    <ul class="nav-list">
+                    </ul>
+            </li>
+					    </ul>
+					    <ul class="nav-list">
+            <li>
+                	<a href="/contact">Contact us</a>
+                    <ul class="nav-list">
+                    </ul>
+            </li>
+					    </ul>
+			    </div>
+</div>
+	
+
+<div class="footer-info container-xl">
+	<div class="info">
+		<span>© 2026 — Trade and Investment Queensland</span>
+		<ul>
+			<li><a href="/sitemap">Sitemap</a></li>
+			<li><a href="/about/copyright">Copyright</a></li>
+			<li><a href="/about/disclaimer">Disclaimer</a></li>
+			<li><a href="/about/privacy-policy">Privacy Policy</a></li>
+			<li><a href="/about/strategies-publications-policies">Publications and data</a></li>
+			<li><a href="/contact/accessing-information/right-to-information">Right to information</a></li>
+			<li><a href="/contact/our-offices">Website feedback</a></li>
+		</ul>
+	</div>
+</div>
+</div>
+	</footer>
+
+	
+	<div class="modal gdpr-modal show" tabindex="-1" role="dialog" aria-modal="true" style="padding-right: 17px; display: block;">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-body">
+					<a id="closeCookiesPopupButton" class="btn btn-sm waves-effect btn-primary-ol waves-light">Close Popup</a>
+					<p><i>We and selected third parties use cookies or similar technologies for technical purposes and, with your consent, for other purposes as specified in our privacy policy. Denying consent may make related features unavailable.<br />
+You can consent to the use of such technologies by using the &ldquo;Allow All Cookies&rdquo; button. By closing this notice, you continue without consenting and only essential cookies will be used.</i></p>
+					<a href="/about/right-to-information/privacy-policy">View privacy policy</a>
+					<br>
+					<button id="essentialCookiesButton" class="btn btn-sm waves-effect btn-primary-ol waves-light">Essential Only</button>
+					<button id="allCookiesButton" class="btn btn-sm waves-effect btn-primary-ol waves-light">Allow All Cookies</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<style>
+		.gdpr-modal .modal-dialog {
+			width: 100vw;
+			max-width: 730px;
+			margin: 0 auto;
+			bottom: 0;
+			left: 50%;
+			position: absolute !important;
+			transform: translateX(-50%) !important;
+			border-radius: 0;
+			border-top: 2px solid #EBEBE2;
+			border-left: 2px solid #EBEBE2;
+			border-right: 2px solid #EBEBE2;
+		}
+
+		.gdpr-modal .modal-content {
+			border-radius: 0;
+			background-color: #FFF;
+			text-align: center;
+			border: 0px solid rgba(0,0,0,.2);
+		}
+
+		.gdpr-modal .modal-body {
+			border-radius: 0;
+			padding: 0.5rem;
+			border-top: 5px solid #000033;
+			border-left: 5px solid #000033;
+			border-right: 5px solid #000033;
+		}
+
+		.gdpr-modal .modal-body a, .gdpr-modal .modal-body p {
+			margin-bottom: 0.25rem;
+		}
+
+		.gdpr-modal .modal-body a {
+			text-decoration: underline;
+			font-size: 14px;
+		}
+
+		.gdpr-modal .btn {
+			text-decoration: none !important;
+			margin: 0 !important;
+			margin-top: 15px !important;
+		}
+
+		.gdpr-modal .btn:hover {
+			text-decoration: none !important;
+		}
+	</style>
+
+
+	<script src="/_content/Kentico.Content.Web.Rcl/Scripts/jquery-3.5.1.js"></script>
+<script src="/_content/Kentico.Content.Web.Rcl/Scripts/jquery.unobtrusive-ajax.js"></script>
+<script type="text/javascript">
+window.kentico = window.kentico || {};
+window.kentico.builder = {}; 
+window.kentico.builder.useJQuery = true;</script><script src="/_content/Kentico.Content.Web.Rcl/Content/Bundles/Public/systemFormComponents.min.js"></script>
+
+
+    
+    
+</body>
+</html>
