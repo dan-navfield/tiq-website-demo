@@ -99,7 +99,6 @@ const languages = [
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [searchOpen, setSearchOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
   const dropdownTimeout = useRef<NodeJS.Timeout | null>(null);
@@ -110,7 +109,6 @@ export function Header() {
       if (headerRef.current && !headerRef.current.contains(e.target as Node)) {
         setActiveDropdown(null);
         setLangOpen(false);
-        setSearchOpen(false);
       }
     }
     document.addEventListener("mousedown", handleClickOutside);
@@ -145,7 +143,7 @@ export function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-1">
+          <nav className="hidden lg:flex items-center gap-0.5">
             {navigation.map((item) => (
               <div
                 key={item.label}
@@ -196,21 +194,27 @@ export function Header() {
             ))}
           </nav>
 
-          {/* Right side: Language + Search + Mobile toggle */}
+          {/* Right side: Search + Language + Mobile toggle */}
           <div className="flex items-center gap-2">
+            {/* Search input - always visible on desktop */}
+            <div className="hidden lg:flex items-center border border-gray-300 px-3 py-1.5">
+              <input
+                type="text"
+                placeholder="Search..."
+                className="w-28 text-sm bg-transparent outline-none placeholder:text-gray-400"
+              />
+              <Search size={16} className="text-gray-500 ml-1" />
+            </div>
+
             {/* Language Selector */}
             <div className="relative hidden lg:block">
               <button
-                onClick={() => {
-                  setLangOpen(!langOpen);
-                  setSearchOpen(false);
-                }}
+                onClick={() => setLangOpen(!langOpen)}
                 className="flex items-center gap-1.5 px-3 py-2 text-sm text-gray-700 hover:text-navy transition-colors"
                 aria-label="Select language"
               >
                 <Globe size={18} />
-                <span className="text-xs font-medium">EN</span>
-                <ChevronDown size={12} />
+                <span className="text-xs font-medium uppercase">English</span>
               </button>
 
               {langOpen && (
@@ -228,18 +232,6 @@ export function Header() {
               )}
             </div>
 
-            {/* Search */}
-            <button
-              onClick={() => {
-                setSearchOpen(!searchOpen);
-                setLangOpen(false);
-              }}
-              className="p-2 text-gray-700 hover:text-navy transition-colors"
-              aria-label="Search"
-            >
-              {searchOpen ? <X size={20} /> : <Search size={20} />}
-            </button>
-
             {/* Mobile Menu Toggle */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -250,33 +242,22 @@ export function Header() {
             </button>
           </div>
         </div>
-
-        {/* Search Bar (Expandable) */}
-        {searchOpen && (
-          <div className="border-t border-gray-200 py-4">
-            <div className="flex items-center gap-3">
-              <Search size={20} className="text-gray-400 flex-shrink-0" />
-              <input
-                type="text"
-                placeholder="Search tiq.qld.gov.au"
-                className="w-full bg-transparent text-lg outline-none placeholder:text-gray-400"
-                autoFocus
-              />
-              <button
-                onClick={() => setSearchOpen(false)}
-                className="text-gray-400 hover:text-navy"
-              >
-                <X size={20} />
-              </button>
-            </div>
-          </div>
-        )}
       </div>
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div className="lg:hidden border-t border-gray-200 bg-white max-h-[80vh] overflow-y-auto">
           <div className="px-4 py-4 space-y-1">
+            {/* Mobile Search */}
+            <div className="flex items-center border border-gray-300 px-3 py-2 mb-4">
+              <input
+                type="text"
+                placeholder="Search..."
+                className="flex-1 text-sm bg-transparent outline-none placeholder:text-gray-400"
+              />
+              <Search size={16} className="text-gray-500" />
+            </div>
+
             {navigation.map((item) => (
               <div key={item.label}>
                 <button
@@ -323,7 +304,7 @@ export function Header() {
                 {languages.slice(0, 6).map((lang) => (
                   <button
                     key={lang.code}
-                    className="px-3 py-1.5 text-xs border border-gray-200 rounded hover:bg-gray-50"
+                    className="px-3 py-1.5 text-xs border border-gray-200 hover:bg-gray-50"
                   >
                     {lang.label}
                   </button>

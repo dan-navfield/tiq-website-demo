@@ -29,17 +29,14 @@ const footerColumns = [
     ],
   },
   {
-    title: "Resources",
+    title: "",
     links: [
       { label: "Careers", href: "/about/careers" },
       { label: "Events", href: "/news-and-events/events" },
       { label: "Resources", href: "/news-and-events" },
       { label: "About", href: "/about" },
+      { label: "Contact us", href: "/contact" },
     ],
-  },
-  {
-    title: "Contact",
-    links: [{ label: "Contact us", href: "/contact" }],
   },
 ];
 
@@ -63,11 +60,11 @@ const socialLinks = [
     ),
   },
   {
-    label: "Twitter",
+    label: "X",
     href: "https://twitter.com/tradeinvestqld",
     icon: (
       <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
-        <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
       </svg>
     ),
   },
@@ -103,10 +100,54 @@ const legalLinks = [
 
 export function Footer() {
   return (
-    <footer className="bg-black text-white">
-      {/* Main Footer */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+    <footer className="bg-navy text-white">
+      {/* Social + Subscribe Bar */}
+      <div className="border-b border-white/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div className="flex items-center gap-4">
+            <span className="text-sm text-white/70">Connect</span>
+            {socialLinks.map((social) => (
+              <a
+                key={social.label}
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white/70 hover:text-white transition-colors"
+                aria-label={social.label}
+              >
+                {social.icon}
+              </a>
+            ))}
+          </div>
+
+          <div className="flex items-center gap-4">
+            <span className="text-sm text-white/70">
+              Get investment news insights
+            </span>
+            <Link
+              href="/subscribe"
+              className="tiq-btn tiq-btn-light text-xs py-2 px-5"
+            >
+              Subscribe
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      {/* Acknowledgment */}
+      <div className="border-b border-white/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
+          <p className="text-xs text-white/60 leading-relaxed">
+            We pay respect to the traditional custodians and first peoples of
+            Queensland, Australia, and acknowledge their continued connection to
+            their country and culture.
+          </p>
+        </div>
+      </div>
+
+      {/* Main Footer Links */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
           {/* Logo Column */}
           <div className="col-span-2 md:col-span-3 lg:col-span-1">
             <Link href="/">
@@ -115,17 +156,19 @@ export function Footer() {
                 alt="Trade and Investment Queensland"
                 width={140}
                 height={80}
-                className="h-16 w-auto mb-6"
+                className="h-16 w-auto mb-4"
               />
             </Link>
           </div>
 
           {/* Link Columns */}
-          {footerColumns.map((col) => (
-            <div key={col.title}>
-              <h3 className="text-sm font-semibold mb-4 text-white/90">
-                {col.title}
-              </h3>
+          {footerColumns.map((col, i) => (
+            <div key={col.title || `col-${i}`}>
+              {col.title && (
+                <h3 className="text-sm font-semibold mb-4 text-white">
+                  {col.title}
+                </h3>
+              )}
               <ul className="space-y-2.5">
                 {col.links.map((link) => (
                   <li key={link.label}>
@@ -141,57 +184,18 @@ export function Footer() {
             </div>
           ))}
         </div>
-
-        {/* Social + Newsletter */}
-        <div className="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
-          {/* Social Icons */}
-          <div className="flex items-center gap-4">
-            {socialLinks.map((social) => (
-              <a
-                key={social.label}
-                href={social.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-white/60 hover:text-white transition-colors"
-                aria-label={social.label}
-              >
-                {social.icon}
-              </a>
-            ))}
-          </div>
-
-          {/* Newsletter */}
-          <div className="flex items-center gap-3">
-            <span className="text-sm text-white/60">
-              Get investment news insights
-            </span>
-            <Link
-              href="/subscribe"
-              className="text-sm font-semibold text-white hover:underline"
-            >
-              Subscribe
-            </Link>
-          </div>
-        </div>
-      </div>
-
-      {/* Acknowledgment */}
-      <div className="border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <p className="text-xs text-white/50 leading-relaxed max-w-4xl">
-            We pay respect to the traditional custodians and first peoples of
-            Queensland, Australia, and acknowledge their continued connection to
-            their country and culture.
-          </p>
-        </div>
       </div>
 
       {/* Legal Links */}
       <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <p className="text-xs text-white/40">
+              &copy; {new Date().getFullYear()} &mdash; Trade and Investment
+              Queensland
+            </p>
             <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
-              {legalLinks.map((link, i) => (
+              {legalLinks.map((link) => (
                 <Link
                   key={link.label}
                   href={link.href}
@@ -201,10 +205,6 @@ export function Footer() {
                 </Link>
               ))}
             </div>
-            <p className="text-xs text-white/40">
-              &copy; {new Date().getFullYear()} &mdash; Trade and Investment
-              Queensland
-            </p>
           </div>
         </div>
       </div>

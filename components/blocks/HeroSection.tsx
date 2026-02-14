@@ -15,11 +15,24 @@ export default function HeroSection({ blok }: { blok: any }) {
         isDark ? "bg-navy text-white" : "bg-neutral text-black"
       )}
     >
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 lg:py-32">
-        <div className="max-w-3xl mx-auto text-center space-y-10">
-          {/* Hero Image/Logo */}
-          {blok.image?.filename && (
-            <div className="flex justify-center">
+      {/* Background image overlay */}
+      {blok.image?.filename && isDark && (
+        <div className="absolute inset-0">
+          <Image
+            src={blok.image.filename}
+            alt=""
+            fill
+            className="object-cover opacity-40"
+          />
+          <div className="absolute inset-0 bg-navy/60" />
+        </div>
+      )}
+
+      <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 lg:py-28">
+        <div className="max-w-3xl space-y-8">
+          {/* Hero Logo */}
+          {blok.image?.filename && !isDark && (
+            <div>
               <Image
                 src={blok.image.filename}
                 alt={blok.image.alt || ""}
@@ -30,26 +43,39 @@ export default function HeroSection({ blok }: { blok: any }) {
             </div>
           )}
 
+          {/* For dark theme, show the logo as inline content */}
+          {blok.image?.filename && isDark && (
+            <div>
+              <Image
+                src={blok.image.filename}
+                alt={blok.image.alt || ""}
+                width={400}
+                height={130}
+                className="max-w-[350px] w-full h-auto object-contain"
+              />
+            </div>
+          )}
+
           {/* Headline */}
           {blok.headline && (
-            <h1
+            <p
               className={cn(
-                "text-xl sm:text-2xl md:text-[28px] font-light leading-relaxed",
-                isDark ? "text-white/90" : "text-black"
+                "text-base sm:text-lg md:text-xl font-medium leading-relaxed",
+                isDark ? "text-white" : "text-black"
               )}
             >
               {blok.headline}
-            </h1>
+            </p>
           )}
 
           {/* CTA Button */}
           {blok.cta_text && blok.cta_url && (
-            <div className="pt-2">
+            <div>
               <Link
                 href={blok.cta_url}
                 className={cn(
                   "tiq-btn",
-                  isDark && "tiq-btn-light"
+                  isDark && "tiq-btn-aqua"
                 )}
               >
                 {blok.cta_text}
