@@ -4,6 +4,7 @@
 @theme {
   --color-navy: #000033;
   --color-navy-light: #000066;
+  --color-navy-dark: #000022;
   --color-white: #FFFFFF;
   --color-black: #000000;
   --color-neutral: #EBEBE2;
@@ -11,9 +12,13 @@
   --color-gray-50: #FAFAF7;
   --color-gray-100: #F5F5F0;
   --color-gray-200: #E8E8E0;
+  --color-gray-300: #CCCCCC;
   --color-gray-400: #999999;
-  --color-gray-600: #666666;
+  --color-gray-500: #777777;
+  --color-gray-600: #555555;
+  --color-gray-700: #444444;
   --color-gray-800: #333333;
+  --color-gray-900: #1a1a1a;
   --color-tiq-blue: #003366;
   --color-tiq-gold: #C4A35A;
 
@@ -30,14 +35,56 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
 
-/* TIQ-style link underline on hover */
 a {
   text-decoration: none;
+}
+
+/* TIQ Button base style */
+.tiq-btn {
+  display: inline-block;
+  padding: 12px 32px;
+  border: 2px solid #000033;
+  color: #000033;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.tiq-btn:hover {
+  background-color: #000033;
+  color: #FFFFFF;
+}
+
+.tiq-btn-light {
+  border-color: #FFFFFF;
+  color: #FFFFFF;
+}
+
+.tiq-btn-light:hover {
+  background-color: #FFFFFF;
+  color: #000033;
+}
+
+/* TIQ Section spacing */
+.tiq-section {
+  padding: 64px 0;
+}
+
+@media (min-width: 768px) {
+  .tiq-section {
+    padding: 80px 0;
+  }
 }

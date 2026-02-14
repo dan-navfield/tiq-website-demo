@@ -7,13 +7,13 @@ export default function ReadMoreItem({ blok }: { blok: any }) {
     <div {...storyblokEditable(blok)}>
       <Link
         href={blok.url || "#"}
-        className="group flex items-center justify-between p-6 bg-white border border-gray-200 hover:border-navy hover:shadow-md transition-all"
+        className="group flex items-center justify-between p-5 bg-white border border-neutral-dark hover:border-navy hover:shadow-md transition-all duration-200 h-full"
       >
-        <span className="text-base font-semibold text-black group-hover:text-navy transition-colors">
+        <span className="text-sm font-semibold text-black group-hover:text-navy transition-colors leading-snug pr-2">
           {blok.title}
         </span>
         <ChevronRight
-          size={20}
+          size={18}
           className="text-gray-400 group-hover:text-navy flex-shrink-0 transition-colors"
         />
       </Link>

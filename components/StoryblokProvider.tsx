@@ -13,6 +13,20 @@ import ReadMoreGrid from "@/components/blocks/ReadMoreGrid";
 import ReadMoreItem from "@/components/blocks/ReadMoreItem";
 import IconTextCard from "@/components/blocks/IconTextCard";
 import CtaSection from "@/components/blocks/CtaSection";
+import Breadcrumb from "@/components/blocks/Breadcrumb";
+import BreadcrumbItem from "@/components/blocks/BreadcrumbItem";
+import PageHero from "@/components/blocks/PageHero";
+import TextSection from "@/components/blocks/TextSection";
+import CardGrid from "@/components/blocks/CardGrid";
+import ContentCard from "@/components/blocks/ContentCard";
+import StatsGrid from "@/components/blocks/StatsGrid";
+import StatItem from "@/components/blocks/StatItem";
+import TwoColumnContent from "@/components/blocks/TwoColumnContent";
+import Accordion from "@/components/blocks/Accordion";
+import AccordionItem from "@/components/blocks/AccordionItem";
+import TestimonialBlock from "@/components/blocks/TestimonialBlock";
+import ContactSection from "@/components/blocks/ContactSection";
+import LinkList from "@/components/blocks/LinkList";
 
 const components = {
   page: Page,
@@ -27,6 +41,20 @@ const components = {
   read_more_item: ReadMoreItem,
   icon_text_card: IconTextCard,
   cta_section: CtaSection,
+  breadcrumb: Breadcrumb,
+  breadcrumb_item: BreadcrumbItem,
+  page_hero: PageHero,
+  text_section: TextSection,
+  card_grid: CardGrid,
+  content_card: ContentCard,
+  stats_grid: StatsGrid,
+  stat_item: StatItem,
+  two_column_content: TwoColumnContent,
+  accordion: Accordion,
+  accordion_item: AccordionItem,
+  testimonial_block: TestimonialBlock,
+  contact_section: ContactSection,
+  link_list: LinkList,
 };
 
 storyblokInit({
