@@ -32,9 +32,6 @@ const components = {
 storyblokInit({
   accessToken: process.env.STORYBLOK_TOKEN,
   use: [apiPlugin],
-  apiOptions: {
-    region: "eu",
-  },
   components,
 });
 

@@ -8,7 +8,7 @@ export default async function Home() {
 
   try {
     const { data } = await storyblokApi.get("cdn/stories/home", {
-      version: "draft",
+      version: "published",
     });
 
     return <StoryblokPage story={data.story} />;
