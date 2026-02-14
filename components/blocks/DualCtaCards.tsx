@@ -3,11 +3,13 @@ import { storyblokEditable, StoryblokComponent } from "@storyblok/react";
 export default function DualCtaCards({ blok }: { blok: any }) {
   return (
     <section {...storyblokEditable(blok)} className="bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-        <div className="grid md:grid-cols-2 gap-6">
-          {blok.cards?.map((card: any) => (
-            <StoryblokComponent blok={card} key={card._uid} />
-          ))}
+      <div className="max-w-[1232px] mx-auto px-4 pt-4 pb-0">
+        <div className="grid md:grid-cols-2 gap-3">
+          {blok.cards?.map((card: any, i: number) => {
+            // First card aqua, second card navy — matches real TIQ site
+            const themedCard = { ...card, theme: i === 0 ? "aqua" : "navy" };
+            return <StoryblokComponent blok={themedCard} key={card._uid} />;
+          })}
         </div>
       </div>
     </section>

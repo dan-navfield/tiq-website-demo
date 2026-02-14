@@ -12,7 +12,7 @@ export default function HeroSection({ blok }: { blok: any }) {
     <section
       {...storyblokEditable(blok)}
       className={cn(
-        "relative overflow-hidden",
+        "relative overflow-hidden min-h-[566px] flex items-center",
         isDark ? "bg-navy text-white" : "bg-neutral text-black"
       )}
     >
@@ -30,17 +30,18 @@ export default function HeroSection({ blok }: { blok: any }) {
         </div>
       )}
 
-      <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 lg:py-28">
-        <div className="max-w-3xl space-y-8">
+      <div className="relative max-w-[1232px] mx-auto px-4 w-full pt-[120px] pb-16">
+        <div className="space-y-8">
           {/* Hero Logo/Image */}
           {blok.image?.filename && (
             <div>
               <Image
                 src={blok.image.filename}
                 alt={blok.image.alt || ""}
-                width={500}
-                height={160}
-                className="max-w-[400px] w-full h-auto object-contain"
+                width={420}
+                height={171}
+                className="w-[420px] h-auto object-contain"
+                style={{ marginTop: "-30px" }}
                 priority
               />
             </div>
@@ -50,8 +51,8 @@ export default function HeroSection({ blok }: { blok: any }) {
           {blok.headline && (
             <p
               className={cn(
-                "text-base sm:text-lg md:text-xl font-medium leading-relaxed",
-                isDark || bgImage ? "text-white" : "text-black"
+                "font-heading text-[22px] font-semibold leading-[26.4px] max-w-[512px] mb-8",
+                isDark || bgImage ? "text-white" : "text-navy"
               )}
             >
               {blok.headline}
@@ -65,7 +66,7 @@ export default function HeroSection({ blok }: { blok: any }) {
                 href={blok.cta_url}
                 className={cn(
                   "tiq-btn",
-                  (isDark || bgImage) && "tiq-btn-aqua"
+                  (isDark || bgImage) && "tiq-btn-fluro"
                 )}
               >
                 {blok.cta_text}

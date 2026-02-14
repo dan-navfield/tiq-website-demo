@@ -101,18 +101,18 @@ const legalLinks = [
 export function Footer() {
   return (
     <footer className="bg-navy text-white">
-      {/* Social + Subscribe Bar */}
-      <div className="border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+      {/* Social + Subscribe Bar — matches real site: bg #EBEBE2, height 82px */}
+      <div style={{ backgroundColor: "#EBEBE2" }}>
+        <div className="max-w-[1232px] mx-auto px-4 py-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div className="flex items-center gap-4">
-            <span className="text-sm text-white/70">Connect</span>
+            <span className="text-base font-heading font-semibold text-navy">Connect</span>
             {socialLinks.map((social) => (
               <a
                 key={social.label}
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white/70 hover:text-white transition-colors"
+                className="text-navy/60 hover:text-navy transition-colors"
                 aria-label={social.label}
               >
                 {social.icon}
@@ -121,12 +121,12 @@ export function Footer() {
           </div>
 
           <div className="flex items-center gap-4">
-            <span className="text-sm text-white/70">
+            <span className="text-base text-navy/70">
               Get investment news insights
             </span>
             <Link
               href="/subscribe"
-              className="tiq-btn tiq-btn-light text-xs py-2 px-5"
+              className="tiq-btn text-sm py-2 px-5"
             >
               Subscribe
             </Link>
@@ -134,10 +134,10 @@ export function Footer() {
         </div>
       </div>
 
-      {/* Acknowledgment */}
-      <div className="border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
-          <p className="text-xs text-white/60 leading-relaxed">
+      {/* Acknowledgment — matches real site: bg #131341 */}
+      <div style={{ backgroundColor: "#131341" }}>
+        <div className="max-w-[1232px] mx-auto px-4 py-8">
+          <p className="text-base leading-6" style={{ color: "#F0F0EC" }}>
             We pay respect to the traditional custodians and first peoples of
             Queensland, Australia, and acknowledge their continued connection to
             their country and culture.
@@ -145,8 +145,8 @@ export function Footer() {
         </div>
       </div>
 
-      {/* Main Footer Links */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      {/* Main Footer Nav — matches real site: padding 48px 16px */}
+      <div className="max-w-[1232px] mx-auto px-4 py-12">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
           {/* Logo Column */}
           <div className="col-span-2 md:col-span-3 lg:col-span-1">
@@ -154,9 +154,9 @@ export function Footer() {
               <Image
                 src="/images/tiq-logo-white.png"
                 alt="Trade and Investment Queensland"
-                width={140}
-                height={80}
-                className="h-16 w-auto mb-4"
+                width={170}
+                height={34}
+                className="w-[170px] h-auto mb-4"
               />
             </Link>
           </div>
@@ -165,7 +165,7 @@ export function Footer() {
           {footerColumns.map((col, i) => (
             <div key={col.title || `col-${i}`}>
               {col.title && (
-                <h3 className="text-sm font-semibold mb-4 text-white">
+                <h3 className="text-base font-heading font-semibold mb-4 text-white">
                   {col.title}
                 </h3>
               )}
@@ -174,7 +174,7 @@ export function Footer() {
                   <li key={link.label}>
                     <Link
                       href={link.href}
-                      className="text-sm text-white/60 hover:text-white transition-colors"
+                      className="text-base text-white/60 hover:text-white transition-colors underline"
                     >
                       {link.label}
                     </Link>
@@ -188,9 +188,9 @@ export function Footer() {
 
       {/* Legal Links */}
       <div className="border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <div className="max-w-[1232px] mx-auto px-4 py-4">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-            <p className="text-xs text-white/40">
+            <p className="text-sm text-white/40">
               &copy; {new Date().getFullYear()} &mdash; Trade and Investment
               Queensland
             </p>
@@ -199,7 +199,7 @@ export function Footer() {
                 <Link
                   key={link.label}
                   href={link.href}
-                  className="text-xs text-white/40 hover:text-white/70 transition-colors"
+                  className="text-sm text-white/40 hover:text-white/70 transition-colors underline"
                 >
                   {link.label}
                 </Link>

@@ -28,6 +28,9 @@ const Page = ({ blok }: { blok: any }) => {
   };
 
   for (const nestedBlok of blok.body || []) {
+    // Skip alert_banner blocks — handled by SiteAlertBanner in layout
+    if (nestedBlok.component === "alert_banner") continue;
+
     if (nestedBlok.component === "icon_text_card") {
       iconCardBuffer.push(nestedBlok);
     } else {
@@ -45,8 +48,8 @@ const Page = ({ blok }: { blok: any }) => {
           const cols = totalItems >= 3 ? "lg:grid-cols-3" : "md:grid-cols-2";
           return (
             <section key={`icon-row-${i}`} className="bg-white">
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
-                <div className={`grid ${cols} gap-6`}>
+              <div className="max-w-[1232px] mx-auto px-4 pb-16">
+                <div className={`grid ${cols} gap-4`}>
                   {item.overflowItems.map((rm: any) => (
                     <ReadMoreItem blok={rm} key={rm._uid} />
                   ))}

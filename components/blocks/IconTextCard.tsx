@@ -12,11 +12,14 @@ export default function IconTextCard({ blok }: { blok: any }) {
     <div
       {...storyblokEditable(blok)}
       className={cn(
-        "p-8 md:p-10 flex flex-col items-start space-y-4",
+        "rounded p-8 flex flex-col items-start space-y-4",
         isNavy && "bg-navy text-white",
         isAqua && "bg-tiq-aqua text-navy",
         !isNavy && !isAqua && "bg-white border border-gray-200"
       )}
+      style={{
+        boxShadow: "rgba(0,0,0,0.1) 0px 4px 8px 0px, rgba(0,0,0,0.05) 0px 1px 4px 0px",
+      }}
     >
       {blok.icon?.filename && (
         <div className="w-12 h-12 flex-shrink-0">
@@ -27,7 +30,7 @@ export default function IconTextCard({ blok }: { blok: any }) {
             height={48}
             className={cn(
               "object-contain",
-              (isNavy || isAqua) && "brightness-0 invert"
+              isNavy && "brightness-0 invert"
             )}
           />
         </div>
@@ -35,7 +38,7 @@ export default function IconTextCard({ blok }: { blok: any }) {
 
       {blok.heading && (
         <h3 className={cn(
-          "text-lg md:text-xl font-bold",
+          "text-[22px] font-semibold font-heading leading-[26.4px]",
           isNavy ? "text-tiq-aqua" : "text-navy"
         )}>
           {blok.heading}
@@ -44,7 +47,7 @@ export default function IconTextCard({ blok }: { blok: any }) {
 
       {blok.description && (
         <p className={cn(
-          "text-sm leading-relaxed",
+          "text-base leading-6",
           isNavy ? "text-white/80" : isAqua ? "text-navy/80" : "text-gray-600"
         )}>
           {blok.description}
@@ -58,8 +61,9 @@ export default function IconTextCard({ blok }: { blok: any }) {
           rel={isExternal ? "noopener noreferrer" : undefined}
           className={cn(
             "tiq-btn inline-flex items-center gap-2 mt-auto",
-            isNavy && "tiq-btn-light",
-            isAqua && "border-navy text-navy hover:bg-navy hover:text-white"
+            isNavy && "tiq-btn-aqua",
+            isAqua && "tiq-btn-outline-navy",
+            !isNavy && !isAqua && "tiq-btn-outline-navy"
           )}
         >
           {blok.link_text}

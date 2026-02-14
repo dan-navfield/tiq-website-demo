@@ -127,23 +127,30 @@ export function Header() {
   };
 
   return (
-    <header ref={headerRef} className="sticky top-0 z-50 bg-white border-b border-gray-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+    <header
+      ref={headerRef}
+      className="relative z-40 -mb-[88px]"
+      style={{
+        backgroundColor: "rgba(0,0,0,0.1)",
+        boxShadow: "rgba(0,0,0,0.08) 0px 4px 24px 0px",
+      }}
+    >
+      <div className="max-w-[1232px] mx-auto px-4">
+        <div className="flex items-center h-[88px]">
           {/* Logo */}
-          <Link href="/" className="flex-shrink-0">
+          <Link href="/" className="flex-shrink-0 mx-4">
             <Image
-              src="/images/tiq-logo-black.png"
+              src="/images/tiq-logo-white.png"
               alt="Trade and Investment Queensland"
-              width={180}
-              height={60}
-              className="h-14 w-auto"
+              width={262}
+              height={53}
+              className="w-[262px] h-auto"
               priority
             />
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-0.5">
+          <nav className="hidden lg:flex items-center flex-1">
             {navigation.map((item) => (
               <div
                 key={item.label}
@@ -154,10 +161,7 @@ export function Header() {
                 <Link
                   href={item.href}
                   className={cn(
-                    "flex items-center gap-1 px-3 py-2 text-sm font-medium transition-colors",
-                    activeDropdown === item.label
-                      ? "text-navy"
-                      : "text-gray-800 hover:text-navy"
+                    "flex items-center gap-1 px-4 h-[88px] text-base font-normal text-white transition-colors hover:text-white/80"
                   )}
                 >
                   {item.label}
@@ -165,7 +169,7 @@ export function Header() {
                     <ChevronDown
                       size={14}
                       className={cn(
-                        "transition-transform",
+                        "transition-transform ml-0.5",
                         activeDropdown === item.label && "rotate-180"
                       )}
                     />
@@ -183,7 +187,7 @@ export function Header() {
                       <Link
                         key={sub.label}
                         href={sub.href}
-                        className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-navy transition-colors"
+                        className="block px-6 py-2 text-base text-navy hover:bg-gray-50 transition-colors"
                       >
                         {sub.label}
                       </Link>
@@ -195,34 +199,41 @@ export function Header() {
           </nav>
 
           {/* Right side: Search + Language + Mobile toggle */}
-          <div className="flex items-center gap-2">
-            {/* Search input - always visible on desktop */}
-            <div className="hidden lg:flex items-center border border-gray-300 px-3 py-1.5">
+          <div className="flex items-center ml-auto">
+            {/* Search panel - visible on desktop */}
+            <div className="hidden lg:flex items-center relative mx-4">
               <input
                 type="text"
                 placeholder="Search..."
-                className="w-28 text-sm bg-transparent outline-none placeholder:text-gray-400"
+                className="w-[234px] h-[48px] text-base text-white placeholder:text-white/50 rounded-t px-4 pr-16 outline-none"
+                style={{ backgroundColor: "rgba(240,240,236,0.1)" }}
+                aria-label="Search input"
               />
-              <Search size={16} className="text-gray-500 ml-1" />
+              <button
+                className="absolute right-0 top-0 h-[48px] w-[48px] flex items-center justify-center text-white"
+                aria-label="Search"
+              >
+                <Search size={20} />
+              </button>
             </div>
 
             {/* Language Selector */}
             <div className="relative hidden lg:block">
               <button
                 onClick={() => setLangOpen(!langOpen)}
-                className="flex items-center gap-1.5 px-3 py-2 text-sm text-gray-700 hover:text-navy transition-colors"
+                className="flex items-center gap-1.5 px-6 h-[88px] text-[15px] font-medium text-white uppercase transition-colors hover:text-white/80"
                 aria-label="Select language"
               >
                 <Globe size={18} />
-                <span className="text-xs font-medium uppercase">English</span>
+                <span>English</span>
               </button>
 
               {langOpen && (
-                <div className="absolute right-0 top-full mt-1 w-48 bg-white border border-gray-200 shadow-lg py-2 max-h-80 overflow-y-auto">
+                <div className="absolute right-0 top-full mt-0 w-48 bg-white border border-gray-200 shadow-lg py-2 max-h-80 overflow-y-auto">
                   {languages.map((lang) => (
                     <button
                       key={lang.code}
-                      className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-navy transition-colors"
+                      className="block w-full text-left px-6 py-2 text-base text-navy hover:bg-gray-50 transition-colors"
                       onClick={() => setLangOpen(false)}
                     >
                       {lang.label}
@@ -235,7 +246,7 @@ export function Header() {
             {/* Mobile Menu Toggle */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2 text-gray-700 hover:text-navy transition-colors"
+              className="lg:hidden p-2 text-white hover:text-white/80 transition-colors"
               aria-label="Toggle menu"
             >
               {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -249,11 +260,11 @@ export function Header() {
         <div className="lg:hidden border-t border-gray-200 bg-white max-h-[80vh] overflow-y-auto">
           <div className="px-4 py-4 space-y-1">
             {/* Mobile Search */}
-            <div className="flex items-center border border-gray-300 px-3 py-2 mb-4">
+            <div className="flex items-center border border-gray-300 rounded px-3 py-2 mb-4">
               <input
                 type="text"
                 placeholder="Search..."
-                className="flex-1 text-sm bg-transparent outline-none placeholder:text-gray-400"
+                className="flex-1 text-base bg-transparent outline-none placeholder:text-gray-400"
               />
               <Search size={16} className="text-gray-500" />
             </div>
@@ -284,7 +295,7 @@ export function Header() {
                       <Link
                         key={sub.label}
                         href={sub.href}
-                        className="block py-2 text-sm text-gray-600 hover:text-navy"
+                        className="block py-2 text-base text-gray-600 hover:text-navy"
                         onClick={() => setMobileMenuOpen(false)}
                       >
                         {sub.label}
@@ -304,7 +315,7 @@ export function Header() {
                 {languages.slice(0, 6).map((lang) => (
                   <button
                     key={lang.code}
-                    className="px-3 py-1.5 text-xs border border-gray-200 hover:bg-gray-50"
+                    className="px-3 py-1.5 text-xs border border-gray-200 rounded hover:bg-gray-50"
                   >
                     {lang.label}
                   </button>

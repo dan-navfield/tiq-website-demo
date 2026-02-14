@@ -10,16 +10,16 @@ export default function CtaSection({ blok }: { blok: any }) {
         background: "linear-gradient(135deg, #000033 0%, #000044 50%, #0a0a4a 100%)",
       }}
     >
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+      <div className="relative max-w-[1232px] mx-auto px-4 py-20 md:py-28">
         <div className="max-w-2xl mx-auto text-center space-y-5">
           {blok.heading && (
-            <h2 className="text-3xl md:text-4xl font-bold text-tiq-aqua">
+            <h2 className="text-[40px] font-bold font-heading text-tiq-aqua leading-[48px]">
               {blok.heading}
             </h2>
           )}
 
           {blok.description && (
-            <p className="text-white/80 text-base leading-relaxed">
+            <p className="text-white/80 text-base leading-6">
               {blok.description}
             </p>
           )}
