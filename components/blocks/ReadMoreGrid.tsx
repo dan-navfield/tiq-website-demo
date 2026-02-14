@@ -2,7 +2,7 @@ import { storyblokEditable, StoryblokComponent } from "@storyblok/react";
 
 export default function ReadMoreGrid({ blok }: { blok: any }) {
   return (
-    <section {...storyblokEditable(blok)} className="tiq-section bg-white">
+    <section {...storyblokEditable(blok)} className="pt-16 md:pt-20 pb-6 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {blok.heading && (
           <h2 className="text-3xl md:text-4xl font-bold text-black text-center mb-10">
