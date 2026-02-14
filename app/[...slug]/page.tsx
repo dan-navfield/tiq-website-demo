@@ -11,7 +11,7 @@ export default async function Page(props: {
 
   try {
     const { data } = await storyblokApi.get(`cdn/stories/${slug}`, {
-      version: "published",
+      version: "draft",
     });
 
     return <StoryblokPage story={data.story} />;
@@ -35,7 +35,7 @@ export async function generateStaticParams() {
   const storyblokApi = getStoryblokApi();
   try {
     const { data } = await storyblokApi.get("cdn/links", {
-      version: "published",
+      version: "draft",
     });
 
     if (!data || !data.links) {
