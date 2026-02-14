@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 export default function HeroSection({ blok }: { blok: any }) {
   const isDark =
     blok.background_theme === "dark" || blok.background_theme === "navy";
+  const bgImage = blok.background_image?.filename;
 
   return (
     <section
@@ -15,23 +16,24 @@ export default function HeroSection({ blok }: { blok: any }) {
         isDark ? "bg-navy text-white" : "bg-neutral text-black"
       )}
     >
-      {/* Background image overlay */}
-      {blok.image?.filename && isDark && (
+      {/* Background image with overlay */}
+      {bgImage && (
         <div className="absolute inset-0">
           <Image
-            src={blok.image.filename}
+            src={bgImage}
             alt=""
             fill
-            className="object-cover opacity-40"
+            className="object-cover"
+            priority
           />
-          <div className="absolute inset-0 bg-navy/60" />
+          <div className="absolute inset-0 bg-navy/70" />
         </div>
       )}
 
       <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 lg:py-28">
         <div className="max-w-3xl space-y-8">
-          {/* Hero Logo */}
-          {blok.image?.filename && !isDark && (
+          {/* Hero Logo/Image */}
+          {blok.image?.filename && (
             <div>
               <Image
                 src={blok.image.filename}
@@ -39,19 +41,7 @@ export default function HeroSection({ blok }: { blok: any }) {
                 width={500}
                 height={160}
                 className="max-w-[400px] w-full h-auto object-contain"
-              />
-            </div>
-          )}
-
-          {/* For dark theme, show the logo as inline content */}
-          {blok.image?.filename && isDark && (
-            <div>
-              <Image
-                src={blok.image.filename}
-                alt={blok.image.alt || ""}
-                width={400}
-                height={130}
-                className="max-w-[350px] w-full h-auto object-contain"
+                priority
               />
             </div>
           )}
@@ -61,7 +51,7 @@ export default function HeroSection({ blok }: { blok: any }) {
             <p
               className={cn(
                 "text-base sm:text-lg md:text-xl font-medium leading-relaxed",
-                isDark ? "text-white" : "text-black"
+                isDark || bgImage ? "text-white" : "text-black"
               )}
             >
               {blok.headline}
@@ -75,7 +65,7 @@ export default function HeroSection({ blok }: { blok: any }) {
                 href={blok.cta_url}
                 className={cn(
                   "tiq-btn",
-                  isDark && "tiq-btn-aqua"
+                  (isDark || bgImage) && "tiq-btn-aqua"
                 )}
               >
                 {blok.cta_text}
