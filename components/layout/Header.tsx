@@ -3,8 +3,10 @@
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname, useRouter } from "next/navigation";
 import { Search, X, Menu, ChevronDown, Globe } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { SUPPORTED_LANGUAGES } from "@/lib/storyblok";
 
 const navigation = [
   {
@@ -104,6 +106,30 @@ export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const dropdownTimeout = useRef<NodeJS.Timeout | null>(null);
   const headerRef = useRef<HTMLElement>(null);
+  const pathname = usePathname();
+  const router = useRouter();
+
+  // Detect current language from URL
+  const pathSegments = pathname.split("/").filter(Boolean);
+  const currentLang = SUPPORTED_LANGUAGES.includes(pathSegments[0])
+    ? pathSegments[0]
+    : "en";
+  const currentLangLabel =
+    languages.find((l) => l.code === currentLang)?.label ?? "English";
+
+  // Strip current language prefix to get the base path
+  const basePath =
+    currentLang !== "en" ? "/" + pathSegments.slice(1).join("/") : pathname;
+
+  function switchLanguage(code: string) {
+    setLangOpen(false);
+    setMobileMenuOpen(false);
+    if (code === "en") {
+      router.push(basePath || "/");
+    } else {
+      router.push(`/${code}${basePath === "/" ? "" : basePath}`);
+    }
+  }
 
   useEffect(() => {
     function handleScroll() {
@@ -256,7 +282,7 @@ export function Header() {
                 aria-label="Select language"
               >
                 <Globe size={18} />
-                <span>English</span>
+                <span>{currentLangLabel}</span>
               </button>
 
               {langOpen && (
@@ -264,8 +290,11 @@ export function Header() {
                   {languages.map((lang) => (
                     <button
                       key={lang.code}
-                      className="block w-full text-left px-6 py-2 text-base text-navy hover:bg-gray-50 transition-colors"
-                      onClick={() => setLangOpen(false)}
+                      className={cn(
+                        "block w-full text-left px-6 py-2 text-base text-navy hover:bg-gray-50 transition-colors",
+                        currentLang === lang.code && "font-semibold bg-gray-50"
+                      )}
+                      onClick={() => switchLanguage(lang.code)}
                     >
                       {lang.label}
                     </button>
@@ -348,10 +377,14 @@ export function Header() {
                 Language
               </p>
               <div className="flex flex-wrap gap-2">
-                {languages.slice(0, 6).map((lang) => (
+                {languages.map((lang) => (
                   <button
                     key={lang.code}
-                    className="px-3 py-1.5 text-xs border border-gray-200 rounded hover:bg-gray-50"
+                    className={cn(
+                      "px-3 py-1.5 text-xs border border-gray-200 rounded hover:bg-gray-50",
+                      currentLang === lang.code && "font-semibold bg-gray-100 border-navy"
+                    )}
+                    onClick={() => switchLanguage(lang.code)}
                   >
                     {lang.label}
                   </button>

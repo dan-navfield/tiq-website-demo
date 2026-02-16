@@ -29,12 +29,20 @@ import { storyblokInit, apiPlugin } from "@storyblok/react";
 
 const STORYBLOK_API_BASE = "https://api.storyblok.com/v2";
 
-export async function fetchStory(slug: string) {
+export const SUPPORTED_LANGUAGES = [
+  "ar", "de", "es", "fr", "hi", "id", "ja", "ko", "pt", "si", "th", "vi",
+  "zh-Hans", "zh-Hant",
+];
+
+export async function fetchStory(slug: string, language?: string) {
   const token = process.env.STORYBLOK_TOKEN;
-  const res = await fetch(
-    `${STORYBLOK_API_BASE}/cdn/stories/${slug}?version=draft&token=${token}`,
-    { cache: "no-store" }
-  );
+  const url = new URL(`${STORYBLOK_API_BASE}/cdn/stories/${slug}`);
+  url.searchParams.set("version", "draft");
+  url.searchParams.set("token", token!);
+  if (language) {
+    url.searchParams.set("language", language);
+  }
+  const res = await fetch(url.toString(), { cache: "no-store" });
   if (!res.ok) {
     throw new Error(`Storyblok API error: ${res.status} ${res.statusText}`);
   }
