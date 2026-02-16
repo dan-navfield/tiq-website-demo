@@ -27,6 +27,7 @@ import AccordionItem from "@/components/blocks/AccordionItem";
 import TestimonialBlock from "@/components/blocks/TestimonialBlock";
 import ContactSection from "@/components/blocks/ContactSection";
 import LinkList from "@/components/blocks/LinkList";
+import VideoEmbed from "@/components/blocks/VideoEmbed";
 
 const components = {
   page: Page,
@@ -55,11 +56,15 @@ const components = {
   testimonial_block: TestimonialBlock,
   contact_section: ContactSection,
   link_list: LinkList,
+  video_embed: VideoEmbed,
 };
 
 storyblokInit({
-  accessToken: process.env.STORYBLOK_TOKEN,
+  accessToken: process.env.NEXT_PUBLIC_STORYBLOK_TOKEN,
   use: [apiPlugin],
+  apiOptions: {
+    region: "eu",
+  },
   components,
 });
 

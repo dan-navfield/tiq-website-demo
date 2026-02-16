@@ -4,10 +4,10 @@ import Link from "next/link";
 
 export default function NewsItem({ blok }: { blok: any }) {
   return (
-    <div {...storyblokEditable(blok)}>
+    <div {...storyblokEditable(blok)} className="h-full">
       <Link
         href={blok.url || "#"}
-        className="group block bg-white rounded overflow-hidden hover:shadow-lg transition-shadow duration-200"
+        className="group relative block bg-white rounded overflow-hidden hover:shadow-lg transition-all duration-200 h-full flex flex-col"
         style={{
           boxShadow: "rgba(0,0,0,0.1) 0px 4px 8px 0px, rgba(0,0,0,0.05) 0px 1px 4px 0px",
         }}
@@ -24,11 +24,17 @@ export default function NewsItem({ blok }: { blok: any }) {
           </div>
         )}
 
-        <div className="p-6">
+        <div className="p-6 flex-1">
           <h3 className="text-base font-semibold font-heading text-navy group-hover:text-navy-light leading-snug transition-colors line-clamp-3">
             {blok.title}
           </h3>
         </div>
+
+        {/* Aqua hover accent — bottom-left triangle */}
+        <div
+          className="absolute bottom-0 left-0 w-[140px] h-[70px] bg-tiq-aqua opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+          style={{ clipPath: "polygon(0 100%, 100% 100%, 0 0)" }}
+        />
       </Link>
     </div>
   );

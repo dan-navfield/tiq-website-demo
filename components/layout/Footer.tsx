@@ -112,7 +112,7 @@ export function Footer() {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-navy/60 hover:text-navy transition-colors"
+                className="text-navy hover:text-navy/70 transition-colors"
                 aria-label={social.label}
               >
                 {social.icon}
@@ -162,27 +162,34 @@ export function Footer() {
           </div>
 
           {/* Link Columns */}
-          {footerColumns.map((col, i) => (
-            <div key={col.title || `col-${i}`}>
-              {col.title && (
-                <h3 className="text-base font-heading font-semibold mb-4 text-white">
-                  {col.title}
-                </h3>
-              )}
-              <ul className="space-y-2.5">
-                {col.links.map((link) => (
-                  <li key={link.label}>
-                    <Link
-                      href={link.href}
-                      className="text-base text-white/60 hover:text-white transition-colors underline"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          {footerColumns.map((col, i) => {
+            const isTealColumn = !col.title;
+            return (
+              <div key={col.title || `col-${i}`}>
+                {col.title && (
+                  <h3 className="text-base font-heading font-semibold mb-4 text-white">
+                    {col.title}
+                  </h3>
+                )}
+                <ul className="space-y-2.5">
+                  {col.links.map((link) => (
+                    <li key={link.label}>
+                      <Link
+                        href={link.href}
+                        className={
+                          isTealColumn
+                            ? "text-base text-tiq-aqua hover:text-white transition-colors underline"
+                            : "text-base text-white/60 hover:text-white transition-colors underline"
+                        }
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            );
+          })}
         </div>
       </div>
 

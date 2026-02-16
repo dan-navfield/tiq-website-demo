@@ -11,7 +11,7 @@ export default function CtaCard({ blok }: { blok: any }) {
     <div
       {...storyblokEditable(blok)}
       className={cn(
-        "rounded p-8 flex flex-col items-start h-full",
+        "rounded p-8 flex flex-col items-start h-full min-h-[290px]",
         isNavy ? "bg-navy" : "bg-tiq-aqua"
       )}
       style={{

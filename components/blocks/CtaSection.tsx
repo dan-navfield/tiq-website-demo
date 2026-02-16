@@ -7,11 +7,11 @@ export default function CtaSection({ blok }: { blok: any }) {
       {...storyblokEditable(blok)}
       className="relative bg-navy overflow-hidden"
       style={{
-        background: "linear-gradient(135deg, #000033 0%, #000044 50%, #0a0a4a 100%)",
+        background: "linear-gradient(235deg, #000033 30%, #000066 100%)",
       }}
     >
-      <div className="relative max-w-[1232px] mx-auto px-4 py-20 md:py-28">
-        <div className="max-w-2xl mx-auto text-center space-y-5">
+      <div className="relative max-w-[768px] mx-auto px-4 py-[96px]">
+        <div className="text-center space-y-8">
           {blok.heading && (
             <h2 className="text-[40px] font-bold font-heading text-tiq-aqua leading-[48px]">
               {blok.heading}
@@ -19,13 +19,13 @@ export default function CtaSection({ blok }: { blok: any }) {
           )}
 
           {blok.description && (
-            <p className="text-white/80 text-base leading-6">
+            <p className="text-white/80 text-lg leading-7">
               {blok.description}
             </p>
           )}
 
           {blok.button_text && blok.button_url && (
-            <div className="pt-3">
+            <div className="pt-6">
               <Link href={blok.button_url} className="tiq-btn tiq-btn-light">
                 {blok.button_text}
               </Link>

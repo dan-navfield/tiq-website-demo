@@ -24,11 +24,30 @@ import AccordionItem from "@/components/blocks/AccordionItem";
 import TestimonialBlock from "@/components/blocks/TestimonialBlock";
 import ContactSection from "@/components/blocks/ContactSection";
 import LinkList from "@/components/blocks/LinkList";
+import VideoEmbed from "@/components/blocks/VideoEmbed";
 import { storyblokInit, apiPlugin } from "@storyblok/react";
+
+const STORYBLOK_API_BASE = "https://api.storyblok.com/v2";
+
+export async function fetchStory(slug: string) {
+  const token = process.env.STORYBLOK_TOKEN;
+  const res = await fetch(
+    `${STORYBLOK_API_BASE}/cdn/stories/${slug}?version=draft&token=${token}`,
+    { cache: "no-store" }
+  );
+  if (!res.ok) {
+    throw new Error(`Storyblok API error: ${res.status} ${res.statusText}`);
+  }
+  const data = await res.json();
+  return data.story;
+}
 
 export const getStoryblokApi = storyblokInit({
   accessToken: process.env.STORYBLOK_TOKEN,
   use: [apiPlugin],
+  apiOptions: {
+    region: "eu",
+  },
   components: {
     // Core
     page: Page,
@@ -59,5 +78,6 @@ export const getStoryblokApi = storyblokInit({
     testimonial_block: TestimonialBlock,
     contact_section: ContactSection,
     link_list: LinkList,
+    video_embed: VideoEmbed,
   },
 });

@@ -12,7 +12,7 @@ export default function HeroSection({ blok }: { blok: any }) {
     <section
       {...storyblokEditable(blok)}
       className={cn(
-        "relative overflow-hidden min-h-[566px] flex items-center",
+        "relative overflow-hidden min-h-[700px] flex items-end",
         isDark ? "bg-navy text-white" : "bg-neutral text-black"
       )}
     >
@@ -26,11 +26,11 @@ export default function HeroSection({ blok }: { blok: any }) {
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-navy/70" />
+          <div className="absolute inset-0 bg-black/40" />
         </div>
       )}
 
-      <div className="relative max-w-[1232px] mx-auto px-4 w-full pt-[120px] pb-16">
+      <div className="relative max-w-[1232px] mx-auto px-4 w-full pt-[220px] pb-16">
         <div className="space-y-8">
           {/* Hero Logo/Image */}
           {blok.image?.filename && (
@@ -41,7 +41,6 @@ export default function HeroSection({ blok }: { blok: any }) {
                 width={420}
                 height={171}
                 className="w-[420px] h-auto object-contain"
-                style={{ marginTop: "-30px" }}
                 priority
               />
             </div>
@@ -51,11 +50,14 @@ export default function HeroSection({ blok }: { blok: any }) {
           {blok.headline && (
             <p
               className={cn(
-                "font-heading text-[22px] font-semibold leading-[26.4px] max-w-[512px] mb-8",
+                "font-heading text-[22px] font-semibold leading-[32px] max-w-[512px] mb-8",
                 isDark || bgImage ? "text-white" : "text-navy"
               )}
             >
               {blok.headline}
+              {blok.highlight_text && (
+                <em className="text-tiq-aqua"> {blok.highlight_text}</em>
+              )}
             </p>
           )}
 

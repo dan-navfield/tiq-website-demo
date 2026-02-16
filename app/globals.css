@@ -48,7 +48,7 @@ html {
   scroll-behavior: smooth;
 }
 
-a {
+a:not([class*="underline"]) {
   text-decoration: none;
 }
 

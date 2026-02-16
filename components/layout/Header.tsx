@@ -101,8 +101,18 @@ export function Header() {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [langOpen, setLangOpen] = useState(false);
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
+  const [scrolled, setScrolled] = useState(false);
   const dropdownTimeout = useRef<NodeJS.Timeout | null>(null);
   const headerRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    function handleScroll() {
+      setScrolled(window.scrollY > 10);
+    }
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
@@ -129,18 +139,23 @@ export function Header() {
   return (
     <header
       ref={headerRef}
-      className="relative z-40 -mb-[88px]"
+      className={cn(
+        "z-40 transition-colors duration-300",
+        scrolled && "shadow-md"
+      )}
       style={{
-        backgroundColor: "rgba(0,0,0,0.1)",
-        boxShadow: "rgba(0,0,0,0.08) 0px 4px 24px 0px",
+        backgroundColor: scrolled ? "#FFFFFF" : "rgba(0,0,0,0.1)",
+        boxShadow: scrolled
+          ? "0 2px 8px rgba(0,0,0,0.1)"
+          : "rgba(0,0,0,0.08) 0px 4px 24px 0px",
       }}
     >
-      <div className="max-w-[1232px] mx-auto px-4">
+      <div className="max-w-[1440px] mx-auto px-6">
         <div className="flex items-center h-[88px]">
           {/* Logo */}
           <Link href="/" className="flex-shrink-0 mx-4">
             <Image
-              src="/images/tiq-logo-white.png"
+              src={scrolled ? "/images/tiq-logo-black.png" : "/images/tiq-logo-white.png"}
               alt="Trade and Investment Queensland"
               width={262}
               height={53}
@@ -161,7 +176,10 @@ export function Header() {
                 <Link
                   href={item.href}
                   className={cn(
-                    "flex items-center gap-1 px-4 h-[88px] text-base font-normal text-white transition-colors hover:text-white/80"
+                    "flex items-center gap-1 px-4 h-[88px] text-base font-normal transition-colors",
+                    scrolled
+                      ? "text-navy hover:text-navy/70"
+                      : "text-white hover:text-white/80"
                   )}
                 >
                   {item.label}
@@ -205,12 +223,20 @@ export function Header() {
               <input
                 type="text"
                 placeholder="Search..."
-                className="w-[234px] h-[48px] text-base text-white placeholder:text-white/50 rounded-t px-4 pr-16 outline-none"
-                style={{ backgroundColor: "rgba(240,240,236,0.1)" }}
+                className={cn(
+                  "w-[234px] h-[48px] text-base rounded-t px-4 pr-16 outline-none",
+                  scrolled
+                    ? "text-navy placeholder:text-gray-400 border border-gray-200"
+                    : "text-white placeholder:text-white/50"
+                )}
+                style={{ backgroundColor: scrolled ? "#F5F5F0" : "rgba(240,240,236,0.1)" }}
                 aria-label="Search input"
               />
               <button
-                className="absolute right-0 top-0 h-[48px] w-[48px] flex items-center justify-center text-white"
+                className={cn(
+                  "absolute right-0 top-0 h-[48px] w-[48px] flex items-center justify-center",
+                  scrolled ? "text-navy" : "text-white"
+                )}
                 aria-label="Search"
               >
                 <Search size={20} />
@@ -221,7 +247,12 @@ export function Header() {
             <div className="relative hidden lg:block">
               <button
                 onClick={() => setLangOpen(!langOpen)}
-                className="flex items-center gap-1.5 px-6 h-[88px] text-[15px] font-medium text-white uppercase transition-colors hover:text-white/80"
+                className={cn(
+                  "flex items-center gap-1.5 px-6 h-[88px] text-[15px] font-medium uppercase transition-colors",
+                  scrolled
+                    ? "text-navy hover:text-navy/70"
+                    : "text-white hover:text-white/80"
+                )}
                 aria-label="Select language"
               >
                 <Globe size={18} />
@@ -246,7 +277,12 @@ export function Header() {
             {/* Mobile Menu Toggle */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2 text-white hover:text-white/80 transition-colors"
+              className={cn(
+                "lg:hidden p-2 transition-colors",
+                scrolled
+                  ? "text-navy hover:text-navy/70"
+                  : "text-white hover:text-white/80"
+              )}
               aria-label="Toggle menu"
             >
               {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}

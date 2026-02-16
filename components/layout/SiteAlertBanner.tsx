@@ -20,7 +20,7 @@ export function SiteAlertBanner() {
               href="/news-and-events/tariffs"
               className="font-semibold text-navy underline hover:no-underline"
             >
-              Learn more &rarr;
+              Learn more -&gt;
             </Link>
           </p>
         </div>

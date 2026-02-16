@@ -34,9 +34,11 @@ export default function RootLayout({
     <html lang="en" className={`${robotoFlex.variable} ${barlow.variable}`}>
       <body className="antialiased bg-white text-black font-sans">
         <StoryblokProvider>
-          <SiteAlertBanner />
-          <Header />
-          <main className="min-h-screen">{children}</main>
+          <div className="sticky top-0 z-40 -mb-[136px]">
+            <SiteAlertBanner />
+            <Header />
+          </div>
+          <main>{children}</main>
           <Footer />
         </StoryblokProvider>
       </body>

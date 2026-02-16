@@ -126,6 +126,10 @@ const components = [
         type: "textarea",
         display_name: "Headline",
       },
+      highlight_text: {
+        type: "text",
+        display_name: "Highlight Text (Aqua Italic)",
+      },
       cta_text: {
         type: "text",
         display_name: "CTA Button Text",
@@ -133,6 +137,11 @@ const components = [
       cta_url: {
         type: "text",
         display_name: "CTA Button URL",
+      },
+      background_image: {
+        type: "asset",
+        display_name: "Background Image",
+        filetypes: ["images"],
       },
       background_theme: {
         type: "option",

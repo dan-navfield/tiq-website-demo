@@ -21,60 +21,54 @@ export default function PageHero({ blok }: { blok: any }) {
             src={blok.image.filename}
             alt={blok.image.alt || ""}
             fill
-            className="object-cover opacity-30"
+            className="object-cover"
           />
-          <div className="absolute inset-0 bg-navy/70" />
+          <div className="absolute inset-0 bg-navy/60" />
         </div>
       )}
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-        <div className="max-w-3xl">
-          {blok.eyebrow && (
-            <p className={cn(
-              "text-sm font-semibold uppercase tracking-wider mb-4",
-              isDark || hasImage ? "text-white/70" : "text-gray-500"
-            )}>
-              {blok.eyebrow}
-            </p>
-          )}
+      <div className="relative max-w-[1232px] mx-auto px-4 flex flex-col min-h-[515px]">
+        {/* Breadcrumb - pinned to top */}
+        {blok.breadcrumb_label && (
+          <nav className="pt-[148px] text-sm">
+            <Link href="/" className="text-white/70 hover:text-white underline">Home</Link>
+            <span className="text-white/50 mx-2">/</span>
+            <span className="text-white/90">{blok.breadcrumb_label}</span>
+          </nav>
+        )}
 
-          {blok.heading && (
-            <h1 className={cn(
-              "text-3xl md:text-4xl lg:text-5xl font-bold leading-tight",
-              isDark || hasImage ? "text-white" : "text-black"
-            )}>
-              {blok.heading}
-            </h1>
-          )}
+        {/* Spacer pushes heading + links to lower portion */}
+        <div className="flex-1" />
 
-          {blok.subheading && (
-            <p className={cn(
-              "text-lg md:text-xl leading-relaxed mt-6 max-w-2xl",
-              isDark || hasImage ? "text-white/80" : "text-gray-600"
-            )}>
-              {blok.subheading}
-            </p>
-          )}
+        {blok.heading && (
+          <h1 className={cn(
+            "text-3xl md:text-[40px] font-bold font-heading leading-tight mb-10",
+            isDark || hasImage ? "text-white" : "text-black"
+          )}>
+            {blok.heading}
+          </h1>
+        )}
 
-          {(blok.cta_text && blok.cta_url) && (
-            <div className="mt-8 flex flex-wrap gap-4">
-              <Link
-                href={blok.cta_url}
-                className={cn("tiq-btn", (isDark || hasImage) && "tiq-btn-light")}
-              >
-                {blok.cta_text}
-              </Link>
-              {blok.cta_secondary_text && blok.cta_secondary_url && (
+        {/* Quick nav links - at bottom */}
+        {blok.quick_links && (
+          <div className="flex flex-wrap gap-2 pb-8">
+            {blok.quick_links.split("\n").map((line: string, i: number) => {
+              const parts = line.split("|");
+              const label = parts[0]?.trim();
+              const url = parts[1]?.trim() || "#";
+              if (!label) return null;
+              return (
                 <Link
-                  href={blok.cta_secondary_url}
-                  className={cn("tiq-btn", (isDark || hasImage) && "tiq-btn-light")}
+                  key={i}
+                  href={url}
+                  className="text-sm text-white border border-white/40 rounded-sm px-3 py-1.5 hover:bg-white/10 transition-colors"
                 >
-                  {blok.cta_secondary_text}
+                  {label}
                 </Link>
-              )}
-            </div>
-          )}
-        </div>
+              );
+            })}
+          </div>
+        )}
       </div>
     </section>
   );
