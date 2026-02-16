@@ -36,13 +36,11 @@ export const SUPPORTED_LANGUAGES = [
 
 export async function fetchStory(slug: string, language?: string) {
   const token = process.env.STORYBLOK_TOKEN;
-  const url = new URL(`${STORYBLOK_API_BASE}/cdn/stories/${slug}`);
-  url.searchParams.set("version", "draft");
-  url.searchParams.set("token", token!);
+  let apiUrl = `${STORYBLOK_API_BASE}/cdn/stories/${slug}?version=draft&token=${token}`;
   if (language) {
-    url.searchParams.set("language", language);
+    apiUrl += `&language=${language}`;
   }
-  const res = await fetch(url.toString(), { cache: "no-store" });
+  const res = await fetch(apiUrl, { cache: "no-store" });
   if (!res.ok) {
     throw new Error(`Storyblok API error: ${res.status} ${res.statusText}`);
   }
