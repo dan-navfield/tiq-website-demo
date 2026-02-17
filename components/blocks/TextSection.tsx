@@ -38,12 +38,12 @@ export default function TextSection({ blok }: { blok: any }) {
 
           {/* CTA buttons */}
           {blok.cta_text && blok.cta_url && (
-            <div className="mt-8 flex flex-wrap gap-4">
-              <Link href={blok.cta_url} className="tiq-btn tiq-btn-fluro">
+            <div className="mt-8 flex flex-wrap gap-4 justify-center">
+              <Link href={blok.cta_url} className="tiq-btn tiq-btn-filled-navy">
                 {blok.cta_text}
               </Link>
               {blok.cta_secondary_text && blok.cta_secondary_url && (
-                <Link href={blok.cta_secondary_url} className="tiq-btn tiq-btn-fluro">
+                <Link href={blok.cta_secondary_url} className="tiq-btn tiq-btn-filled-navy">
                   {blok.cta_secondary_text}
                 </Link>
               )}
