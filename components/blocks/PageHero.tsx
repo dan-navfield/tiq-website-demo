@@ -51,7 +51,7 @@ export default function PageHero({ blok }: { blok: any }) {
 
         {/* Quick nav links - at bottom */}
         {blok.quick_links && (
-          <div className="flex flex-wrap gap-2 pb-8">
+          <div className="flex flex-wrap gap-x-6 gap-y-2 pb-8">
             {blok.quick_links.split("\n").map((line: string, i: number) => {
               const parts = line.split("|");
               const label = parts[0]?.trim();
@@ -61,7 +61,7 @@ export default function PageHero({ blok }: { blok: any }) {
                 <Link
                   key={i}
                   href={url}
-                  className="text-sm text-white border border-white/40 rounded-sm px-3 py-1.5 hover:bg-white/10 transition-colors"
+                  className="text-base text-white underline underline-offset-4 decoration-white/60 hover:decoration-white transition-colors"
                 >
                   {label}
                 </Link>
