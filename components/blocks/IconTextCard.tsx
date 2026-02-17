@@ -12,7 +12,7 @@ export default function IconTextCard({ blok }: { blok: any }) {
     <div
       {...storyblokEditable(blok)}
       className={cn(
-        "rounded p-8 flex flex-col items-start space-y-4",
+        "rounded overflow-hidden flex flex-col items-start",
         isNavy && "bg-navy text-white",
         isAqua && "bg-tiq-aqua text-navy",
         !isNavy && !isAqua && "bg-white border border-gray-200"
@@ -21,6 +21,14 @@ export default function IconTextCard({ blok }: { blok: any }) {
         boxShadow: "rgba(0,0,0,0.1) 0px 4px 8px 0px, rgba(0,0,0,0.05) 0px 1px 4px 0px",
       }}
     >
+      {/* Aqua gradient top accent bar */}
+      <div
+        className="w-full h-1 flex-shrink-0"
+        style={{
+          background: "linear-gradient(90deg, #00E6E5 0%, #00B8D4 100%)",
+        }}
+      />
+      <div className="p-8 flex flex-col items-start space-y-4 w-full">
       {blok.icon?.filename && (
         <div className="w-12 h-12 flex-shrink-0">
           <Image
@@ -70,6 +78,7 @@ export default function IconTextCard({ blok }: { blok: any }) {
           {isExternal && <ExternalLink size={14} />}
         </a>
       )}
+      </div>
     </div>
   );
 }

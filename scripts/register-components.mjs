@@ -352,6 +352,16 @@ const components = [
         type: "text",
         display_name: "Link URL",
       },
+      background: {
+        type: "option",
+        display_name: "Background",
+        options: [
+          { name: "White (Default)", value: "white" },
+          { name: "Navy", value: "navy" },
+          { name: "Aqua", value: "aqua" },
+        ],
+        default_value: "white",
+      },
     },
   },
 
