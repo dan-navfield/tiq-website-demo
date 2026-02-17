@@ -316,6 +316,11 @@ const components = [
         type: "text",
         display_name: "URL",
       },
+      image: {
+        type: "asset",
+        display_name: "Image",
+        filetypes: ["images"],
+      },
     },
   },
 
