@@ -176,7 +176,7 @@ export function Header() {
           : "rgba(0,0,0,0.08) 0px 4px 24px 0px",
       }}
     >
-      <div className="max-w-[1440px] mx-auto px-6">
+      <div className="max-w-[1384px] mx-auto px-6">
         <div className="flex items-center h-[88px]">
           {/* Logo */}
           <Link href="/" className="flex-shrink-0 mx-4">

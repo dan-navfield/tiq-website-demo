@@ -30,7 +30,7 @@ export default function HeroSection({ blok }: { blok: any }) {
         </div>
       )}
 
-      <div className="relative max-w-[1232px] mx-auto px-4 w-full pt-[220px] pb-16">
+      <div className="relative max-w-[1232px] mx-auto px-4 w-full pt-[248px] pb-12">
         <div className="space-y-8">
           {/* Hero Logo/Image */}
           {blok.image?.filename && (
