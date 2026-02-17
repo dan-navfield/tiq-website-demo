@@ -8,13 +8,9 @@ export default function FeaturedCard({ blok }: { blok: any }) {
   return (
     <section {...storyblokEditable(blok)} className="bg-neutral py-[96px]">
       <div className="max-w-[1232px] mx-auto px-4">
-        <div className="grid md:grid-cols-[2fr_1fr] gap-0 bg-white rounded overflow-hidden"
-          style={{
-            boxShadow: "rgba(0,0,0,0.1) 0px 4px 8px 0px, rgba(0,0,0,0.05) 0px 1px 4px 0px",
-          }}
-        >
+        <div className="grid md:grid-cols-[1.8fr_1fr] gap-0 items-center">
           {blok.image?.filename && (
-            <div className="aspect-video md:aspect-auto md:min-h-[515px] overflow-hidden bg-gray-100">
+            <div className="aspect-video md:aspect-auto md:min-h-[515px] overflow-hidden">
               <Image
                 src={blok.image.filename}
                 alt={blok.image.alt || ""}
@@ -25,7 +21,7 @@ export default function FeaturedCard({ blok }: { blok: any }) {
             </div>
           )}
 
-          <div className="p-8 md:p-10 flex flex-col justify-center space-y-6">
+          <div className="p-8 md:px-12 md:py-10 flex flex-col justify-center space-y-6">
             <h2 className="text-[22px] md:text-[28px] font-bold font-heading text-navy leading-snug">
               {blok.headline}
             </h2>
@@ -36,14 +32,14 @@ export default function FeaturedCard({ blok }: { blok: any }) {
                   href={blok.cta_url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="tiq-btn tiq-btn-filled-navy self-start"
+                  className="tiq-btn tiq-btn-filled-navy w-full"
                 >
                   {blok.cta_text}
                 </a>
               ) : (
                 <Link
                   href={blok.cta_url}
-                  className="tiq-btn tiq-btn-filled-navy self-start"
+                  className="tiq-btn tiq-btn-filled-navy w-full"
                 >
                   {blok.cta_text}
                 </Link>
